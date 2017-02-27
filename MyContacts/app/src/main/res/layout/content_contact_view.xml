@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="io.bitfountain.ashishpatel.mycontacts.ContactViewActivity"
+    tools:showIn="@layout/activity_contact_view">
+
+    <RelativeLayout
+        android:id="@+id/contact_view_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/contact_view_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sunset"/>
+
+        <TextView
+            android:id="@+id/contact_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/vertical_small_margin"
+            android:text="Hello World!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/white"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/contact_view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/Theme.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/contact_view_fields"
+        android:layout_weight="100"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+</LinearLayout>
